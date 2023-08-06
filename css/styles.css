@@ -1,0 +1,263 @@
+/* fonts  */
+
+
+/* font-family: 'Cinzel Decorative', cursive;
+font-family: 'Mulish', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Work Sans', sans-serif; 
+font-family: 'Nunito Sans', sans-serif;*/
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    background-color: #f7ffe0 !important;
+}
+
+.nav {
+    margin-top: 2%;
+}
+
+.nav-font {
+    font-size: 20px;
+    margin-right: 10px !important;
+}
+
+.brand {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.home-header {
+    margin: 8% 0;
+    text-align: center;
+}
+
+.home-head {
+    font-size: 17rem;
+    font-weight: 900;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+.home-adverb {
+    margin-top: 0px;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.light-font {
+    font-weight: 200;
+}
+
+.ex-light-font {
+    font-weight: 300;
+}
+
+.home-2 {
+    margin: 10% 0;
+}
+
+.h2-content {
+    background-color: #000000e3;
+    color: white;
+    padding: 56px 107px !important;
+    border-radius: 50px;
+}
+
+.d1 {
+    font-size: 3rem;
+    padding-bottom: 12px;
+}
+
+.d2,
+.d4 {
+    margin-left: 84px;
+    margin-top: -24px;
+    /* padding-left: 123px; */
+    text-align: end;
+    line-height: 0.5;
+    font-size: 3.5rem;
+    column-width: 275px;
+}
+
+.d2-2,
+.d4-2 {
+    font-size: 16px;
+}
+
+.d3 {
+    font-size: 16px;
+}
+
+.opacity {
+    opacity: 50%;
+}
+
+
+/* meetsection */
+
+.meet-content {
+    margin: 10% 0px !important;
+}
+
+.meet-head {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.meet-head-bold {
+    font-weight: 800;
+}
+
+.contact-btn {
+    border-radius: 15px !important;
+}
+
+.meet-img {
+    margin: 14% 0 0 33%;
+}
+
+
+/* products */
+
+.prod-t {
+    width: 75%;
+    margin-top: 85px;
+}
+
+.prod-r {
+    width: 55%;
+    margin-top: 61px;
+    margin-bottom: 9px;
+}
+
+.prod-b {
+    width: 63%;
+    margin: 60px 0 0 69px;
+}
+
+
+/* broucher */
+
+.brouch-img {
+    margin: 42% 0 0 16%;
+}
+
+
+/* vectors */
+
+.abs {
+    position: absolute;
+    top: 0%;
+}
+
+.img-1 {
+    top: 50%;
+    left: 5%;
+    width: 18%;
+}
+
+.img-2 {
+    top: 19%;
+    right: 3%;
+}
+
+.img-3 {
+    top: 55%;
+    left: 10%;
+    width: 3%;
+}
+
+.img-4 {
+    top: 63%;
+    left: 6%;
+}
+
+.img-5 {
+    top: 117%;
+    width: 17%;
+    /* left: 1%; */
+    right: 7%;
+}
+
+.img-7 {
+    top: 85rem;
+    width: 4%;
+    right: 38rem;
+}
+
+.img-6 {
+    top: 82rem;
+    width: 4%;
+    right: 28rem;
+}
+
+.img-8 {
+    top: 88rem;
+    width: 4%;
+    right: 19rem;
+}
+
+
+/* additional conatiner  */
+
+.additional-container {
+    background-image: linear-gradient(to bottom, #f7ffe0 0%, #f7ffe0 10%, #008000ad 60%);
+    padding: 10% 0;
+}
+
+.h2-content {
+    background-color: #000000e3;
+    color: white;
+    padding: 56px 107px !important;
+    border-radius: 50px;
+}
+
+.e1 {
+    font-size: 3rem;
+    padding-bottom: 12px;
+}
+
+.e2,
+.e4 {
+    margin-left: 84px;
+    margin-top: -24px;
+    text-align: end;
+    line-height: 0.5;
+    font-size: 3.5rem;
+    column-width: 275px;
+}
+
+.e2-2,
+.e4-2 {
+    font-size: 16px;
+}
+
+.e3 {
+    font-size: 16px;
+}
+
+.addon-img {
+    width: 94%;
+}
+
+
+/* footer  */
+
+.footer {
+    background-color: #008000ad;
+    padding-bottom: 3%;
+}
+
+.footer-brand {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.rights {
+    background-color: #008000ad;
+}
