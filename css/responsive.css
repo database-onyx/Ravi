@@ -302,3 +302,56 @@
         }
     }
 }
+
+@media (max-width: 360px) {
+    body {
+        .gif-4 {
+            top: 25%;
+            width: 14%;
+            left: 3%;
+        }
+        .gif-2 {
+            top: 36%;
+            width: 8%;
+            left: 6%;
+        }
+        /* broucher  */
+        .gif-5 {
+            top: 81rem;
+            width: 54%;
+            left: -6%;
+        }
+        .left-align {
+            text-align: left;
+        }
+        .gif-6 {
+            top: 203rem;
+            width: 30%;
+            left: 33%;
+        }
+        .img-6 {
+            top: 85rem;
+            width: 16%;
+            right: 10rem;
+        }
+        .img-8 {
+            top: 92rem;
+            width: 14%;
+            right: 1rem;
+        }
+        .img-7 {
+            top: 92rem;
+            width: 12%;
+            right: 19rem;
+        }
+        /* testimonial  */
+        .gif-3 {
+            top: 231rem;
+            width: 20%;
+        }
+        /* footer  */
+        .social-menu ul {
+            top: 266rem;
+        }
+    }
+}
