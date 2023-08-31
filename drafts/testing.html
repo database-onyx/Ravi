@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/address.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <!-- <link rel="stylesheet" href="css/slider.css"> -->
+</head>
+
+<body>
+
+    <section>
+        <h1 class="meet-head">
+            Products <br> <span class="meet-head-bold"> In Vertpak</span>
+        </h1>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <div id="products-slider" class="owl-carousel">
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <img src="assets/images/bag-11.png" alt="products"> </div>
+                            <h3 class="title">Paper Bag</h3>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <img src="assets/images/tissue.png" class="prod-t" alt="products"> </div>
+                            <h3 class="title">Tissue Paper</h3>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <img src="assets/images/roll-1.png" class="prod-r" alt="products"></div>
+                            <h3 class="title">Toilet Roll</h3>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <img src="assets/images/billing-roll.png" class="prod-b" alt="products"></div>
+                            <h3 class="title">Billing Roll</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+    </section>
+    <script>
+        jQuery(document).ready(function($) {
+            "use strict";
+            //  TESTIMONIALS CAROUSEL HOOK
+            $('#customers-testimonials').owlCarousel({
+                loop: true,
+                center: true,
+                items: 3,
+                margin: 0,
+                autoplay: true,
+                dots: true,
+                autoplayTimeout: 8500,
+                smartSpeed: 450,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1170: {
+                        items: 3
+                    }
+                }
+            });
+        });
+
+
+        $(document).ready(function() {
+            $("#testimonial-slider").owlCarousel({
+                items: 3,
+                itemsDesktop: [1000, 3],
+                itemsDesktopSmall: [980, 2],
+                itemsTablet: [768, 2],
+                itemsMobile: [650, 1],
+                pagination: true,
+                navigation: false,
+                slideSpeed: 1000,
+                autoPlay: true
+            });
+        });
+
+        $(document).ready(function() {
+            $("#products-slider").owlCarousel({
+                items: 3,
+                itemsDesktop: [1000, 3],
+                itemsDesktopSmall: [980, 2],
+                itemsTablet: [768, 2],
+                itemsMobile: [650, 1],
+                pagination: true,
+                navigation: false,
+                slideSpeed: 1000,
+                autoPlay: true,
+
+            });
+        });
+    </script>
+
+
+    <!-- script pages  -->
+    <script src="js/script.js "></script>
+    <script src="js/carous.js "></script>
+    <script src="js/client.js "></script>
+    <script src="js/animation.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
+    <!-- bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <!-- social media  -->
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js " crossorigin="anonymous "></script>
+    <!-- jquery  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>

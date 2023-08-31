@@ -1,0 +1,370 @@
+/* desktop and laptops  */
+
+@media (max-width: 1366px) {
+    /* home  */
+    .home-header {
+        margin: 4% 0 8% 0;
+        text-align: center;
+    }
+    .img-2 {
+        top: 16%;
+        right: 2%;
+        width: 16%;
+    }
+    .gif-2 {
+        top: 51%;
+        width: 3%;
+        left: 26%;
+    }
+    .gif-4 {
+        top: 23%;
+        width: 6%;
+        left: 24%;
+    }
+    /* section trust  */
+    .h2-content {
+        background-color: #000000e3;
+        color: white;
+        padding: 55px 63px !important;
+        border-radius: 50px;
+    }
+    .d1 {
+        font-size: 2.8rem;
+        padding-bottom: 12px;
+    }
+    .d3 {
+        font-size: 14px;
+    }
+    /* getting started  */
+    .meet-sub {
+        font-size: 2.2rem;
+    }
+    .img-7 {
+        top: 80rem;
+        width: 4%;
+        right: 35rem;
+    }
+    .img-6 {
+        top: 76rem;
+        width: 4%;
+        right: 25rem;
+    }
+    .img-8 {
+        top: 82rem;
+        width: 4%;
+        right: 16rem;
+    }
+    .gif-5 {
+        z-index: -999;
+        top: 94rem;
+        width: 17%;
+        left: 19%;
+    }
+    .video {
+        margin-left: 4% !important;
+    }
+    /* broucher  */
+    .gif-1 {
+        top: 178rem;
+        width: 16%;
+    }
+    .brouch-img {
+        margin: 10% 0 0 0%;
+        width: 97%;
+    }
+    .brouch-para {
+        font-size: 0.91rem;
+    }
+    /* addtional service  */
+    .e1 {
+        font-size: 2.7rem;
+        padding-bottom: 2px;
+    }
+    .e3 {
+        font-size: 14px;
+    }
+    .gif-3 {
+        top: 224rem;
+        right: 49%;
+        width: 7%;
+    }
+    .social-menu ul {
+        top: 272rem;
+    }
+}
+
+
+/* tablet and potrait mode  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        /* home  */
+        .gif-4 {
+            top: 16%;
+            width: 9%;
+            left: 15%;
+        }
+        .gif-2 {
+            top: 43%;
+            width: 5%;
+            left: 17%;
+        }
+        .img-1 {
+            top: 50%;
+            left: 1%;
+            width: 15%;
+        }
+        .img-2 {
+            top: 10%;
+            right: 1%;
+            width: 13%;
+        }
+        /* below home page  */
+        .d1 {
+            font-size: 2.5rem;
+        }
+        .img-5 {
+            top: 106%;
+            width: 19%;
+            right: 4%;
+        }
+        /* vertpak is easy  */
+        .img-6 {
+            top: 71rem;
+            width: 5%;
+            right: 16rem;
+        }
+        .img-7 {
+            top: 76rem;
+            width: 4%;
+            right: 25rem;
+        }
+        .img-8 {
+            top: 77rem;
+            width: 4%;
+            right: 7rem;
+        }
+        .meet-sub {
+            font-size: 1.9rem;
+        }
+        .gif-5 {
+            top: 88rem;
+            width: 21%;
+            left: 15%;
+        }
+        /* broucher  */
+        .gif-1 {
+            top: 166rem;
+            width: 18%;
+        }
+        .brouch-img {
+            margin: 15% 0 0 0%;
+            width: 100%;
+        }
+        .brouch-img {
+            margin: 15% 0 0 0%;
+            width: 100%;
+        }
+        /* additional service  */
+        .gif-3 {
+            top: 216rem;
+        }
+        /* footer  */
+        .social-menu ul {
+            top: 257.5rem;
+        }
+        .address {
+            font-size: 1.1rem;
+            margin: 3% 0;
+        }
+        .footer-credits {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+
+/* mobile responsive  */
+
+@media (max-width: 480px) {
+    body {
+        .nav-font {
+            visibility: hidden;
+        }
+        .home-head {
+            font-size: 8rem;
+        }
+        .img-1 {
+            top: 16%;
+            left: 35%;
+            width: 28%;
+        }
+        .img-2 {
+            visibility: hidden;
+        }
+        .gif-4 {
+            top: 23%;
+            width: 24%;
+            left: 8%;
+        }
+        .gif-2 {
+            top: 38%;
+            width: 7%;
+            left: 9%;
+        }
+        .home-adverb {
+            margin-top: 0px;
+            font-size: 2.2rem;
+            font-weight: 400;
+        }
+        .ex-light-font {
+            font-size: 1.4rem;
+            padding: 10px 13px 1px 8px;
+        }
+        /* trust  */
+        .h2-content {
+            padding: 14px 37px !important;
+        }
+        .d1 {
+            font-size: 2.6rem;
+        }
+        .d3 {
+            font-size: 13px;
+        }
+        .d2,
+        .d4 {
+            margin-left: 38px;
+            font-size: 2.6rem;
+        }
+        .d2-2,
+        .d4-2 {
+            font-size: 15px;
+        }
+        .img-5 {
+            visibility: hidden;
+        }
+        .gif-5 {
+            top: 75rem;
+            width: 51%;
+            left: -6%;
+        }
+        .img-6 {
+            top: 80rem;
+            width: 16%;
+            right: 11rem;
+        }
+        .meet-img {
+            margin: 14% 0 0 15%;
+        }
+        .img-7 {
+            top: 86rem;
+            width: 12%;
+            right: 21rem;
+        }
+        .img-8 {
+            top: 86rem;
+            width: 14%;
+            right: 2rem;
+        }
+        /* products  */
+        .prod-r,
+        .prod-t,
+        .prod-ba {
+            margin-left: 71px;
+        }
+        /* video  */
+        .video {
+            width: 350px !important;
+            height: 200px !important;
+        }
+        /* broucher  */
+        .title,
+        .brouch-para {
+            text-align: center;
+        }
+        .gif-6 {
+            top: 212rem;
+            width: 30%;
+            left: 35%;
+        }
+        /* additional  */
+        .e1 {
+            font-size: 1.9rem;
+        }
+        .e3 {
+            font-size: 14px;
+        }
+        .addon-img {
+            width: 135%;
+        }
+        .gif-3 {
+            top: 223rem;
+            width: 20%;
+        }
+        /* footer  */
+        .social-menu ul {
+            /* top: 262rem; */
+            top: 249rem;
+        }
+    }
+    .footer-credits {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        .gif-4 {
+            top: 25%;
+            width: 14%;
+            left: 3%;
+        }
+        .gif-2 {
+            top: 36%;
+            width: 8%;
+            left: 6%;
+        }
+        /* broucher  */
+        .gif-5 {
+            top: 81rem;
+            width: 54%;
+            left: -6%;
+        }
+        .left-align {
+            text-align: left;
+        }
+        .gif-6 {
+            top: 203rem;
+            width: 30%;
+            left: 33%;
+        }
+        .img-6 {
+            top: 85rem;
+            width: 16%;
+            right: 10rem;
+        }
+        .img-8 {
+            top: 92rem;
+            width: 14%;
+            right: 1rem;
+        }
+        .img-7 {
+            top: 92rem;
+            width: 12%;
+            right: 19rem;
+        }
+        .video {
+            margin-left: -6px !important;
+        }
+        /* testimonial  */
+        .gif-3 {
+            top: 231rem;
+            width: 20%;
+        }
+        /* footer  */
+        .social-menu ul {
+            /* top: 274.5rem; */
+            top: 261.5rem;
+        }
+    }
+}

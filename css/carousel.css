@@ -1,0 +1,30 @@
+body {
+    align-items: center;
+    justify-content: center;
+}
+
+.slider,
+.bslider {
+    mix-blend-mode: multiply;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    color: #f7ffe0;
+}
+
+.slider .slide-track,
+.bslider .bslide-track {
+    animation: scroll 200s linear infinite;
+    display: flex;
+    width: calc(250px * 15);
+}
+
+.slider .slide,
+.bslider .bslide {
+    padding-left: 8%;
+    height: 200px;
+    width: 100px !important;
+    object-fit: cover;
+}
