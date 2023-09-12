@@ -1,0 +1,388 @@
+/* font-family: 'Alegreya Sans SC', sans-serif;  for name 
+font-family: 'Carrois Gothic SC', sans-serif; mainfont
+font-family: 'Tajawal', sans-serif;    normal 
+font-family: 'Mulish', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+dark green color #263A29
+light green #41644A*/
+
+* {
+    font-family: 'Mulish', sans-serif;
+    scroll-behavior: smooth;
+    /* scroll-behavior: calc(); */
+}
+
+
+/* overlays */
+
+.design,
+.rdesign,
+.cdesign,
+.cidesign {
+    position: absolute;
+    top: -76px;
+    width: 44%;
+    left: -33%;
+    z-index: 999;
+    rotate: 8deg;
+}
+
+.rdesign {
+    top: 119%;
+    left: 70%;
+    rotate: 0deg;
+}
+
+.cdesign,
+.cidesign {
+    left: -32%;
+    rotate: 0deg;
+    top: 129.5rem;
+}
+
+.cidesign {
+    left: 86.5%;
+    rotate: 180deg;
+    top: 134rem;
+}
+
+
+/* scrollbar  */
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #41644A;
+    opacity: 10%;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #F7E1AE;
+}
+
+
+/* navbar  */
+
+.navbar {
+    padding-top: 1% !important;
+}
+
+.menus:hover {
+    font-size: 2rem;
+}
+
+.home,
+#skills,
+.do-card {
+    position: static;
+    z-index: 999999;
+    background-color: #41644A !important;
+}
+
+.span-font {
+    font-family: 'alegreya sans sc', sans-serif;
+    font-size: 1.9rem !important;
+    font-weight: 500;
+}
+
+.span-color,
+.span-font,
+.profile-name,
+.number,
+.illustration,
+.menus:hover {
+    color: #F7E1AE !important;
+}
+
+.btn-outline-info,
+.profile-head,
+.desig-profile,
+.white,
+.skillset,
+.home a {
+    color: white !important;
+}
+
+.profile-head {
+    font-size: 2.2rem;
+    margin-top: 24%;
+    line-height: 2.5rem;
+}
+
+.profile-name {
+    font-size: 4.3rem !important;
+}
+
+.designation {
+    font-size: 2.4rem;
+    margin-top: 0px;
+}
+
+#lets {
+    width: 28%;
+}
+
+.lets-talk {
+    padding: 0% !important;
+}
+
+#mail {
+    width: 68.6%;
+    visibility: hidden;
+}
+
+.mail,
+a#button {
+    text-decoration: none !important;
+}
+
+.profile-img {
+    margin-top: 10%;
+    padding-bottom: 2%;
+    width: 700px;
+}
+
+.desig-profile {
+    font-size: 1.1rem;
+    padding: 4% 0%;
+}
+
+.btn-outline-info {
+    border: 1px solid #F7E1AE!important;
+}
+
+.btn-outline-info:hover {
+    background-color: #F7E1AE !important;
+    border: 2px solid black !important;
+    color: black !important;
+}
+
+.git {
+    margin: 3% 0%;
+    font-size: 30px;
+}
+
+.git-logo,
+.social {
+    padding: 0px !important;
+}
+
+.gradientback,
+.gradientback1,
+.gradientback3 {
+    width: 100%;
+    height: 120px;
+}
+
+.gradientback {
+    background: -webkit-linear-gradient(top, #41644a 0%, #2a9039 100%);
+}
+
+
+/* about */
+
+#about,
+#do,
+#contact-me,
+#button:hover {
+    background-color: #263A29;
+    position: static;
+}
+
+.abt-cnt {
+    margin: 0px !important;
+    padding-bottom: 60px;
+}
+
+.abt-btn {
+    padding: 0% !important;
+}
+
+.profile-abt {
+    margin-top: 10%;
+    padding-bottom: 2%;
+    width: 700px;
+}
+
+.abt-head {
+    margin-top: 40% !important;
+}
+
+.about-para {
+    font-size: 1.3rem;
+    color: #ffffffa1 !important;
+    padding-bottom: 4%;
+    z-index: 99999;
+}
+
+.gradientback1 {
+    background: -webkit-linear-gradient(top, #2a9039 0%, #41644a 101%);
+}
+
+
+/* skills */
+
+.skill-head {
+    margin-top: 0%;
+}
+
+.small-font {
+    font-size: 1.4rem;
+    line-height: 0.5rem;
+}
+
+.skill {
+    padding: 0 0 4% 0;
+}
+
+.number {
+    font-weight: bolder;
+}
+
+#do {
+    padding-top: 12%;
+    height: 580px;
+}
+
+.do-head,
+#do,
+.contact,
+#button {
+    text-align: center;
+}
+
+.do-cont {
+    max-width: 1061px !important;
+}
+
+.do-card {
+    margin: 2%;
+}
+
+.illustration {
+    font-size: 48px;
+}
+
+
+/* certificates */
+
+.certificate-cont {
+    position: static !important;
+}
+
+.certificate {
+    padding-top: 4%;
+    padding-bottom: 1%;
+}
+
+.cert-heading {
+    padding-bottom: 1%;
+}
+
+
+/* contact me  */
+
+#contact-me {
+    height: 510px;
+}
+
+.contact-me {
+    font-size: 3.8rem !important;
+}
+
+.message {
+    padding: 20px;
+    padding-left: 0px !important;
+    padding-bottom: 10px;
+    height: 20px;
+}
+
+.text-message {
+    height: 145px;
+}
+
+.message-btn {
+    margin-top: 4% !important;
+    margin-left: 37%;
+}
+
+
+/* footer  */
+
+.footer-cont {
+    padding-top: 5%;
+}
+
+.gradientback3 {
+    height: 200px;
+    background: -webkit-linear-gradient(top, #263A29 0%, #2a9039 100%);
+}
+
+.footer-desig {
+    font-size: 1.1rem;
+}
+
+.footer-name {
+    margin: 0%;
+    font-size: 2rem !important;
+}
+
+.rights {
+    color: #ffffff8f;
+}
+
+
+/* top button */
+
+#button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    content: "↑";
+    font-family: FontAwesome;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: gold;
+}
+
+#button:hover {
+    cursor: pointer;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
