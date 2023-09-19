@@ -195,20 +195,20 @@
             font-size: 8rem;
         }
         .img-1 {
-            top: 16%;
-            left: 35%;
-            width: 28%;
+            top: 10%;
+            left: 40%;
+            width: 21%;
         }
         .img-2 {
             visibility: hidden;
         }
         .gif-4 {
-            top: 23%;
+            top: 10%;
             width: 24%;
             left: 8%;
         }
         .gif-2 {
-            top: 38%;
+            top: 25%;
             width: 7%;
             left: 9%;
         }
@@ -244,12 +244,12 @@
             visibility: hidden;
         }
         .gif-5 {
-            top: 75rem;
+            top: 69rem;
             width: 51%;
             left: -6%;
         }
         .img-6 {
-            top: 80rem;
+            top: 75rem;;
             width: 16%;
             right: 11rem;
         }
