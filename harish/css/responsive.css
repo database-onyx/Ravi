@@ -1,0 +1,113 @@
+@media screen and (max-width: 480px) {
+    .menus {
+        /* visibility: hidden; */
+        display: none !important;
+    }
+    .profile-head {
+        margin-top: 0% !important;
+        padding-top: 8%;
+    }
+    .profile-name {
+        font-size: 3.3rem !important;
+    }
+    .designation {
+        font-size: 2.0rem;
+    }
+    .desig-profile {
+        font-size: 0.9rem;
+        padding: 2% 0%;
+    }
+    #lets {
+        width: 31%;
+    }
+    .row {
+        --bs-gutter-x: 0rem !important
+    }
+    .profile-img {
+        margin-top: -30%;
+        padding-bottom: 0%;
+        width: 272px;
+        margin-left: 10%;
+    }
+    .profile-name {
+        margin-bottom: 0px !important;
+    }
+    .profile-abt {
+        max-width: 0px;
+        margin: 0%;
+    }
+    .profile-abt {
+        margin-top: 0px !important;
+    }
+    .about-para {
+        font-size: 1.1rem;
+    }
+    .skill-tab-1 {
+        float: left !important;
+        width: 50% !important;
+        padding-top: 8% !important;
+    }
+    .skill-tab-2 {
+        float: right !important;
+        width: 50% !important;
+        padding-top: 8% !important;
+    }
+    .certificate-cont {
+        max-width: 0px !important;
+        visibility: hidden;
+    }
+    .do-cont {
+        width: 69% !important;
+    }
+    .card-title {
+        font-size: 18px;
+        color: #F7E1AE !important;
+    }
+    .card-text:last-child {
+        margin-bottom: 0;
+        font-size: 13px;
+    }
+    #do {
+        height: 1%;
+    }
+    /* contact section */
+    #contact-me {
+        height: 486px;
+        padding-top: 13%;
+    }
+    .text-message {
+        display: none !important;
+    }
+    .contact-pad {
+        padding-bottom: 3%;
+    }
+    .message-btn {
+        margin-top: 4% !important;
+        margin-left: 33%;
+    }
+    #footer {
+        height: 200px;
+        display: none !important;
+    }
+    /* illustrations */
+    .design {
+        position: absolute;
+        top: -49px;
+        width: 87%;
+        left: -70%;
+        z-index: 999;
+        rotate: 8deg;
+    }
+    .cdesign {
+        left: -81%;
+        rotate: 0deg;
+        width: 100%;
+        top: 105.2rem;
+    }
+    .cidesign {
+        left: 84.5%;
+        rotate: 180deg;
+        width: 100%;
+        top: 129rem;
+    }
+}
