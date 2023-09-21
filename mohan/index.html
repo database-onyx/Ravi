@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class=""text-center" style="margin-left: 20%;">
+            <a href="https://ndma.gov.in/Natural-Hazards/Landslide/Dos-Donts" style="padding: 10px;">Landslide </a>
+            <a href="https://ndma.gov.in/index.php/Natural-Hazards/Cyclone/Dos-Donts" style="padding: 10px;">Cyclone</a>
+            <a href="https://ndma.gov.in/Natural-Hazards/Tsunami/Dos-Donts" style="padding: 10px;">Tsunami</a>
+            <a href="https://ndma.gov.in/Natural-Hazards/Heat-Wave/Dos-Donts" style="padding: 10px;">Heat Wave</a>
+            <a href="https://ndma.gov.in/Natural-Hazards/Urban-Floods/Dos-Donts" style="padding: 10px;">Urban Floods</a>
+            <a href="https://ndma.gov.in/Natural-Hazards/Floods/Do-Donts" style="padding: 10px;">Floods</a>
+            <a href="https://ndma.gov.in/Natural-Hazards/Earthquakes/Dos-Donts" style="padding: 10px;">Earthquakes</a>
+        </div>
+        <h1 class="text-center">Disaster Management</h1>
+        <form id="disasterForm">
+            <div class="form-group">
+                <label for="stateSelect">Select State:</label>
+                <select class="form-control" id="stateSelect" required>
+                    <option value="" disabled selected>Select a state</option>
+                    <!-- Add all states in India here -->
+                    <option value="AndhraPradesh">Andhra Pradesh</option>
+                    <option value="ArunachalPradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="HimachalPradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="MadhyaPradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="TamilNadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="UttarPradesh">Uttar Pradesh</option>
+                    <option value="WestBengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="districtSelect">Select District:</label>
+                <select class="form-control" id="districtSelect" required>
+                    <option value="" disabled selected>Select a district</option>
+                    <!-- Options for districts will be populated using JavaScript -->
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    
+        <div id="disasterInfo" style="display: none;">
+            <!-- Information about disaster management for the selected district will be displayed here -->
+        </div>
+        <script>
+            // Dummy data for disaster information in Karnataka
+            const disasterData = {
+                AndhraPradesh:{
+                    districts: ["EastGodavari","Kakinada","Nellore","Srikakulam","WestGodavari"],
+                    EastGodavari:{
+                        helpline: "Helpline: 18004250101",
+                        campDetails: "Camp Details: Rajamahendravaram,Amalapuram. (The camp is located in Government School,College,Hospital)",
+                    },
+                    Kakinada:{
+                        helpline: "Helpline: 1800-425-3077",
+                        campDetails: "Camp Details: Rajamahendravaram,Amalapuram. (The camp is located in Government School,College,Hospital)",
+                    },
+                    Nellore:{
+                        helpline: "Helpline: 9711077372 , 011-24363260",
+                        campDetails: "Sajjapuram,Mannavarappadu,Mulumudi. (The camp is located in Government School,College,Hospital)",
+                    },
+                    Srikakulam:{
+                        helpline: "Helpline: 9711077372 , 011-24363260",
+                        campDetails: "Camp Details: Amadalavalasa,Narasannapeta,Ponduru. (The camp is located in Government School,College,Hospital)",
+                    },
+                    WestGodavari:{
+                        helpline: "Helpline: 18004250101",
+                        campDetails: "Camp Details: : Veeravasaram. Palakoderu. Pentapadu. (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                ArunachalPradesh:{
+                    districts: ["Seppa","Itanagar","Tawang","Yingkiong","Mechuko"],
+                    Itanagar:{
+                        helpline: "Helpline: 1077, 1070",
+                        campDetails: "Camp Details: papu Nallah,Tinali. (The camp is located in Government School,College,Hospital)",
+                    },
+                    Tawang:{
+                        helpline: "Helpline: 1077,1070",
+                        campDetails: "Camp Details: Township,Zemithang (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Assam:{
+                    districts:["Baksa","Barpeta","Chirang","Darrang","Dhemaji"],
+
+                    Baksa:{
+                        helpline: "Helpline: 84719-00263",
+                        campDetails: "Camp Details: Goreswar, Barama (The camp is located in Government School,College,Hospital)"
+                    },
+                    Barpeta: {
+                        helpline: "Helpline: 90851-98481",
+                        campDetails: "Camp Details: Barpeta, Kamrup, Goalpara (The camp is located in Government School,College,Hospital)",
+                    },
+                    Chirang: {
+                        helpline: "Helpline: 03664-242316",
+                        campDetails: "Camp Details: Bengtol, Barnagar (The camp is located in Government School,College,Hospital)",
+                    },
+                    Darrang: {
+                        helpline: "Helpline: 03713-222723",
+                        campDetails: "Camp Details: Alikhash , Bagaribari (The camp is located in Government School,College,Hospital)",
+                    },
+                    Dhemaji: {
+                        helpline: "Helpline: 801102-5984",
+                        campDetails: "Camp Details: Charaipara, Hatigarh (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Bihar:{
+                    districts: ["Darbhanga","EastChamparan","Gopalganj","Khagaria","Kishanganj"],
+                    Darbhanga: {
+                        helpline: "Helpline: 06272-245055",
+                        campDetails: "Camp Details: BENIPUR (The camp is located in Government School,College,Hospital)",
+                    },
+                    EastChamparan:{
+                        helpline: "Helpline: 0612-2233333",
+                        campDetails: "Camp Details: Chaika (The camp is located in Government School,College,Hospital)",
+                    },
+                    Gopalganj:{
+                        helpline: "Helpline: 06156-224601",
+                        campDetails: "Camp Details: Barauli (The camp is located in Government School,College,Hospital)",
+                    },
+                    Khagaria:{
+                        helpline :"Helpline: 06244-222064",
+                        campDetails:"Camp Details: Chautham,mansi,parbatta (The camp is located in Government School,College,Hospital)",
+                    },
+                    Kishanganj:{
+                        helpline : "Helpline: 06456-222530",
+                        campDetails : "Camp Details: Masaurhi,Paliganji (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Chhattisgarh:{
+                    districts:["Chandigar"],
+                    Chandigar:{
+                        helpline: "Helpline: 2749194",
+                        campDetails: "Camp Details: Kishanpura,Dyalpur (The camp is located in Government School,College,Hospital)"
+                    },
+                },
+                Goa:{
+                    districts:["Panaji"],
+                    Panaji:{
+                        helpline: "Helpline: 0832-2225850",
+                        campDetails: "Camp Details: Calapor, Renovadi, Siridao (The camp is located in Government School,College,Hospital) "
+                    },
+                },
+                Gujarat:{
+                    districts:["Bharuch","Bhavnagar","DevbhumiDwarka","Jamnagar","Junagadh"],
+                    Bharuch:{
+                        helpline: "Helpline: 079-23259275",
+                        campDetails: "Camp Details: Bharuch (The camp is located in Government School,College,Hospital)",
+                    },
+                    Bhavnagar:{
+                        campDetails: "Camp Details: Bhavnagar (The camp is located in Government School,College,Hospital)",
+                    },
+                    DevbhumiDwarka:{
+                        helpline: "Helpline:  2833 232620",
+                        campDetails: "Camp Details: Khambhaliya,Kalyanpur (The camp is located in Government School,College,Hospital)"
+                    },
+                    Jamnagar:{
+                        helpline: "Helpline: 0288-2553404",
+                        campDetails: "Jamnagar (The camp is located in Government School,College,Hospital)",
+                    },
+                    Junagadh:{
+                        helpline: "Helpline: 0285-2634595",
+                        campDetails: "Camp Details: Keshod,Manavadar (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Haryana:{
+                    districts: ["Faridabad","Bhiwani","Ambala","Jhajjar","Karnal"],
+                    Faridabad:{
+                        helpline: "Helpline: 9050613496",
+                        campDetails: "Camp Details: Neharpar, Suraj Kund, Atmadpur (The camp is located in Government School,College,Hospital)",
+                    },
+                    Bhiwani:{
+                        helpline: "Help line: 9416188749",
+                        campDetails: "Camp Details: Dadri, Loharu, Lohani (The camp is located in Government School,College,Hospital)",
+                    },
+                    Ambala:{
+                        helpline: "Help line: 9416184873",
+                        campDetails: "Camp Details: Mohra, Saha, Barara (The camp is located in Government School,College,Hospital)",
+                    },
+                    Jhajjar:{
+                        helpline: "Help line: 01251-253116",
+                        campDetails: "Camp Details: Badli , Bahadurgarh, Badsa (The camp is located in Government School,College,Hospital)",
+                    },
+                    Karnal:{
+                        helpline: "Help line: 0172-254938",
+                        campDetails: "Camp Details:  Vikash Nagar , Indri (The camp is located in Government School,College,Hospital)",
+                    }
+                },
+                HimachalPradesh:{
+                    districts:["Solan","Kullu","Banjar","Mandi","Shimla"],
+                    Solan:{
+                        helpline: "Help line: 1800111555",
+                        campDetails: "Camp Details: Kamli, Koti, Jabli, Sihardi, Sultanpur, Kyar, Shamti (The camp is located in Government School,College,Hospital)",
+                    },
+                    Kullu:{
+                        helpline: "Help line: 01902-225630, 01902-225631",
+                        campDetails: "Camp Details: Gadsa Nullah (The camp is located in Government School,College,Hospital)",
+                    },
+                    Banjar:{
+                        helpline: "Help line: 01903-221512",
+                        campDetails: "Camp Details: Jibhi (The camp is located in Government School,College,Hospital)",
+                    },
+                    Mandi:{
+                        helpline: "Help line: 01905-223555",
+                        campDetails: "Camp Details: Seraj valley, Kataula, Kotla (The camp is located in Government School,College,Hospital)",
+                    },
+                    Shimla:{
+                        campDetails: "Camp Details: Gaura, Jhakri, Khamadi (The camp is located in Government School,College,Hospital)"
+                    }
+                },
+                Jharkhand:{
+                    districts:["Sahibganj","Godda","Pakur","Singhbhum","Saraikela","Garhwa"]
+                },
+                Karnataka: {
+                    districts: ["Bangalore", "VIJAYAPURA", "Udupi", "DakshinaKannada", "Bagalko"],
+                    Bangalore: {
+                        campDetails: "Camp Details: (Hebbala(Bengaluru North),Yelahanka,Kengeri(BengaluruSouth),Krishnarajapura(Bengaluru East),Anekal. (The camp is located in Government School,College,Hospital)",
+                    },
+                    VIJAYAPURA: {
+                        helpline: "Help line: 08352-221261",
+                        campDetails: "Camp Details: Vijayapura, Basavan Bagewadi, Muddebihal, Babaleshwar, Tikota. (The camp is located in Government School,College,Hospital)",
+                    },
+                    Udupi: {
+                        campDetails: "Camp Details: Udupi, Karkala, Kundapura, Byndoor, Brahmavara, and Kaup. (The camp is located in Government School,College,Hospital)",
+                    },
+                    DakshinaKannada: {
+                        helpline: "Help line: 9483908000",
+                        campDetails: "Camp Details: Mangaluru,Belthangady,Puttur,Uppinangady,Bantwal,Sullia,Ullal,Thumbe. (The camp is located in Government School,College,Hospital)",
+                    },
+                    Bagalko: {
+                        helpline: "Help line: 08354. 236101",
+                        campDetails: "Camp Details: Badami and Hunagund. (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Kerala:{
+                    districts:["Idukki","Wayanad","Kozhikode","Thrissur","Ernakulam"],
+                    Idukki:{
+                        helpline: "Help line: 04862-233036",
+                        campDetails: "Camp Details: Munnar,Idukki,Peerumade,Thodupuzha,Adimali (The camp is located in Government School,College,Hospital)",
+                    },
+                    Wayanad:{
+                        helpline: "Help line: 04936-204151",
+                        campDetails: "Camp Details: Kalpetta, Mananthavady,Sulthan Bathery (The camp is located in Government School,College,Hospital)",
+                    },
+                    Kozhikode:{
+                        helpline: "Help line: 0495 2371400",
+                        campDetails: "Camp Details: Puthiyangadi, Pantheerankavu, Nellikode, Kacheri, Chevayur (The camp is located in Government School,College,Hospital)"
+                    },
+                    Thrissur:{
+                        helpline: "Help line: 0487-2333070",
+                        campDetails: "Camp Details: Punkunnam, Patturakkal and Cheroor (The camp is located in Government School,College,Hospital)",
+                    },
+                    Ernakulam:{
+                        helpline: "Help line: 0471-2518513/0471-2518487",
+                        campDetails: "Camp Details: Aluva, Kunnathunadu, Kochi, Kanayannur, Kothamangalam, Muvattupuzha (The camp is located in Government School,College,Hospital)"
+                    },
+                },
+                MadhyaPradesh:{
+                    districts:["Bhopal","Indore","Jabalpur","Gwalior","uijain"],
+                },
+                Maharashtra:{
+                    districts: ["Pune","Nagpur","Jalgaon"],
+                    Pune:{
+                        campDetails: "Camp Details: Ambegaon,Baramati,Daund,Haveli,Indapur,Junnar,Khed (The camp is located in Government School,College,Hospital)",
+                    },
+                    Nagpur:{
+                        campDetails: "Camp Details: Nagpur Urban, Nagpur Rural, Hingna, Kamptee, Katol, Narkhed (The camp is located in Government School,College,Hospital)",
+                    },
+                    Jalgaon:{
+                        helpline: "HELP LINE:1800 -111- 555",
+                        campDetails: "Camp Details: Dharangaon, Amalner, Bhadgaon, Bhusawal, Bodwad, Chalisgaon (The camp is located in Government School,College,Hospital)"
+                    }
+                },
+                Manipur:{
+                    districts:["TAMENGLONG","SENAPATI","CHANDEL"],
+                    TAMENGLONG:{
+                        helpline: "Helpline number: 9436683196, 9402415562, 03877-222003",
+                        campDetails:"Camp Details: Tupul (The camp is located in Government School,College,Hospital)",
+                    },
+                    SENAPATI:{
+                        helpline: "Helpline number : 9612042811",
+                        campDetails: "Camp Details: Ngari Khullen (The camp is located in Government School,College,Hospital)",
+                    },
+                    CHANDEL:{
+                        helpline: "Helpline number : 9612258678,8729988519",
+                        campDetails: "Camp Details: Jaumol (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Meghalaya:{
+                    districts:['Shillong', 'Tura', 'Jowai'],
+                    Shillong:{
+                        helpline : "Rescue Team No -  0364-2227000 ",
+                        campDetails: "Camp Details: Moti nagar, Lamwabah, Upper Mawprem (The camp is located in Government School,College,Hospital)",
+                    },
+                    Tura:{
+                        helpline: "Rescue Team No: 0364-2500053",
+                        campDetails: "Camp Details: Tura (The camp is located in Government School,College,Hospital)",
+                    },
+                    Jowai:{
+                        helpline: "Rescue Team No - 0364-2227000",
+                        campDetails: "Camp Details: Amlarem , Jarain , Jowai (The camp is located in Government School,College,Hospital)"
+                    }
+                },
+                Mizoram:{
+                    districts:["Aizawl","Lunglei","Saiha"],
+                    Aizawl:{
+                        helpline: "Rescue Team No : 0389-2334327",
+                        campDetails: "Camp Details: Durtlang , Ramthar , Buhban (The camp is located in Government School,College,Hospital)",
+                    },
+                    Lunglei:{
+                        helpline: "Rescue Team No - 0389-2341203",
+                        campDetails: "Camp Details:  Chithar , Dawn ,  Sairep (The camp is located in Government School,College,Hospital)",
+                    },
+                    Saiha:{
+                        helpline: "Rescue Team No - 03835-222609",
+                        campDetails: "Camp Details: Riasikah , Bymari , Lodaw  (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Nagaland:{
+                    districts:['Chumoukedima', 'Dimapur', 'Mokokchung', 'Tuensang'],
+                    Chumoukedima:{
+                        campDetails: "Camp Details: Diphupar, Samaguri, Zani (The camp is located in Government School,College,Hospital)",
+                    },
+                    Dimapur:{
+                        campDetails: "Camp Details: Vedima, Senjum, Rilan (The camp is located in Government School,College,Hospital)",
+                    },
+                    Mokokchung:{
+                        campDetails: "Camp Details: Chakpa, Longkong, Saring (The camp is located in Government School,College,Hospital)",
+                    },
+                    Tuensang:{
+                        helpline: "Rescue Team No - 8414853766",
+                        campDetails: "Camp Details: Alisopurm, Hukir, Kusong  (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Odisha:{
+                    districts:['Bhubaneswar', 'Cuttack', 'Rourkela', 'Brahmapur'],
+                    Bhubaneswar:{
+                        helpline: "Rescue Team No - 0674-2395398",
+                        campDetails: "Camp Details: Patia, Sundarpada, Kalinganagar (The camp is located in Government School,College,Hospital)",
+                    },
+                    Cuttack:{
+                        helpline: "Rescue Team No - 0671-2301711",
+                        campDetails: "Camp Details: Patapur, Tulsipur, Banara (The camp is located in Government School,College,Hospital)",
+                    },
+                    Rourkela:{
+                        helpline: "Rescue Team No - 0671-2303263",
+                        campDetails: "Camp Details: Jhirpani, Dalposh, Jamsera (The camp is located in Government School,College,Hospital)",
+                    },
+                    Brahmapur:{
+                        helpline: "Rescue Team No - 680-2223333",
+                        campDetails: "Camp Details: Kalakada, Naranpur, Sridharpur (The camp is located in Government School,College,Hospital)"
+                    },
+                },
+                Punjab:{
+                    districts: ["PATIALA","MOHALI","LUDIANA"],
+                    PATIALA:{
+                        helpline: "Helpline number : 01752359999",
+                        campDetails: "Camp Details: Rohar Jagi, Badshahpur, Rampur Parta (The camp is located in Government School,College,Hospital)"
+                    },
+                    MOHALI:{
+                        helpline: "Helpline number : 7347661642",
+                        campDetails: "Camp Details:Dehar, Alamgir, Tiwana, Khajur mani  (The camp is located in Government School,College,Hospital)",
+                    },
+                    LUDIANA:{
+                        helpline: "Helpline number : 0161-2441257",
+                        campDetails: "CMC colony, Hardev nagar, Hundal Chowk (The camp is located in Government School,College,Hospital)"
+                    }
+                },
+                Rajasthan:{
+                    districts: ["Dausa","Deeg","Dholpur"],
+                    Dausa:{
+                        campDetails : "Camp Details: Baswa , Dausa , Lalsot , Ramgarh Pacchwara  (The camp is located in Government School,College,Hospital)"
+                    },
+                    Deeg:{
+                        campDetails: "Camp Details: Nagar , Deeg , Kaman , Janothar , Kumher  (The camp is located in Government School,College,Hospital)"
+                    },
+                    Dholpur: {
+                        campDetails: "Bari , Baseri , Dhaulpur , Mania , Rajakhera , Sarmathura (The camp is located in Government School,College,Hospital)"
+                    },
+                },
+                Sikkim:{
+                    districts:['Gangtok', 'Namchi', 'Mangan', 'Gyalshing'],
+                    Gangtok:{
+                        campDetails: "Camp Details: Rangpo ,Tadong, Rakdong (The camp is located in Government School,College,Hospital)",
+                    },
+                    Namchi:{
+                        campDetails: "Camp Details: Bikmat, Kamrang, Manpur (The camp is located in Government School,College,Hospital)",
+                    },
+                    Mangan:{
+                        campDetails: "Camp Details: Sangtok, Pakshep, Kazor (The camp is located in Government School,College,Hospital)",
+                    },
+                    Gyalshing:{
+                        campDetails: "Camp Details: Kongri, Martam, Sapong (The camp is located in Government School,College,Hospital)"
+                    }
+                },
+                TamilNadu:{
+                    districts: ['Chennai','Erode','Nagapattinam','coimbatore'],
+                    Chennai:{
+                        helpline: "Help line number:1077",
+                        campDetails: "Camp Details: Thiruvottriyur,Tondiarpet,Madhvaram,Perambur (The camp is located in Government School,College,Hospital)",
+                    },
+                    Erode:{
+                        helpline: "HELPLINE NO. 09711077372",
+                        campDetails: "Camp Details: Erode,Bhavani,Gobichettipalayam,Sathyamangalam,Perundurai (The camp is located in Government School,College,Hospital)",
+                    },
+                    Nagapattinam:{
+                        helpline: "Helpline number:1077",
+                        campDetails: "Camp Details: Sirkali,Nagapattinam,Mayiladuthurai (The camp is located in Government School,College,Hospital)",
+                    },
+                    coimbatore:{
+                        helpline: "Help line: 011-24363260",
+                        campDetails: "Camp Details: Coimbatore (South), Coimbatore (North), Perur, Madukkarai, Annur, Mettupalayam (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Telangana:{
+                    districts: ["Adilabad","Hyderabad","KVRangareddy"],
+                    Adilabad:{
+                        helpline: "Helpline:08732-224100",
+                        campDetails: "Camp Details: Asifabad,Bejjur,Bhainsa,Chennoor,Jainad,Kubeer,Mancherial (The camp is located in Government School,College,Hospital)"
+                    },
+                    Hyderabad:{
+                        helpline: "Helpline:040-2344255",
+                        campDetails: "Camp Details: Amberpet,Balanagar,Balapur,Ghatkesar,Nampally,Quthbullapur,Uppal (The camp is located in Government School,College,Hospital)",
+                    },
+                    KVRangareddy:{
+                        campDetails: "Camp Details: Balanagar,Farooqnagar,Ghatkesar,Hayathnagar,Ibrahimpatnam (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+                Tripura:{
+                    districts: ['Agartala', 'Udaipur', 'Dharmanagar'],
+                    Agartala:{
+                        campDetails:"Camp Details: Banamalipur, Dhaleswar, Ramnagar (The camp is located in Government School,College,Hospital)",
+                    },
+                    Udaipur: {
+                        campDetails: "Camp Details: Kupilong, Lakshipati, Manikya (The camp is located in Government School,College,Hospital)" 
+                    },
+                    Dharmanagar:{
+                        campDetails: "Camp Details: Krishnapur, Rajbari, Padmapur  (The camp is located in Government School,College,Hospital)"
+                    },
+                },
+                UttarPradesh:{
+                    districts: ['KANPUR',"LUCKNOW",'VARANASI','AGRA'],
+                    KANPUR:{
+                        helpline: "HelpLine : 9454400211,0512-2530663",
+                        campDetails: "Camp Details: Kalyanpur, Kidwai Nagar, Swaroop Nagar (The camp is located in Government School,College,Hospital)",
+                    },
+                    LUCKNOW:{
+                        helpline: "HelpLine: 155300",
+                        campDetails: "Camp Details: Jankipuram, Mahanagar, Aliganj, Rajajipuram, Alambagh (The camp is located in Government School,College,Hospital)"
+                    },
+                    VARANASI:{
+                        campDetails:" Camp Details: SarnathRamnagar, Godowlia Market, Vishwanath Gali (The camp is located in Government School,College,Hospital)",
+                    },
+                    AGRA:{
+                        campDetails: "Camp Details: Shahjganj,Sanjay Place,Jeoni Mandi,Foundry Nagar (The camp is located in Government School,College,Hospital)"
+                    },
+                },
+                WestBengal:{
+                    districts:['Kolkata', 'Howrah', 'Asansol', 'Siliguri', 'Durgapur'],
+                    Kolkata:{
+                        helpline: "Rescue Team no : 098302 55470",
+                        campDetails: "Camp Details: Kestopur, Salt Lake, Nicco Park (The camp is located in Government School,College,Hospital)",
+                    },
+                    Howrah:{
+                        helpline: "Rescue team no : 9830193381",
+                        campDetails: "Camp Details: Hindolganj, Hashnabad, Haora (The camp is located in Government School,College,Hospital)",
+                    },
+                    Asansol:{
+                        helpline: "Rescue team no: 9073936732",
+                        campDetails: "Camp Details: Burnpur, Shristinagar, Kulti (The camp is located in Government School,College,Hospital)",
+                    },
+                    Siliguri:{
+                        helpline: "Rescue team no: 9073936733",
+                        campDetails: "Camp Details: Matigara,Bankim Nagar,Salugara (The camp is located in Government School,College,Hospital)",
+                    },
+                    Durgapur:{
+                        helpline: "Rescue team no: 03542344448",
+                        campDetails: "Camp Details: Bidhannagar, Benachity, Fuljhore (The camp is located in Government School,College,Hospital)",
+                    },
+                },
+            };
+    
+            // Function to populate the district dropdown based on the selected state
+            function populateDistricts() {
+                const stateSelect = document.getElementById("stateSelect");
+                const districtSelect = document.getElementById("districtSelect");
+                const selectedState = stateSelect.value;
+    
+                // Clear previous options
+                districtSelect.innerHTML = '<option value="" disabled selected>Select a District</option>';
+    
+                if (selectedState in disasterData) {
+                    const districts = disasterData[selectedState].districts;
+                    for (const district of districts) {
+                        const option = document.createElement("option");
+                        option.value = district;
+                        option.textContent = district;
+                        districtSelect.appendChild(option);
+                    }
+                }
+            }
+    
+            // Function to display disaster information on form submission
+            function displayDisasterInfo(event) {
+                event.preventDefault();
+                const stateSelect = document.getElementById("stateSelect");
+                const districtSelect = document.getElementById("districtSelect");
+                const disasterInfo = document.getElementById("disasterInfo");
+                const selectedState = stateSelect.value;
+                const selectedDistrict = districtSelect.value;
+    
+                if (selectedState in disasterData && selectedDistrict in disasterData[selectedState]) {
+                    const info = disasterData[selectedState][selectedDistrict];
+                    const helpline = info.helpline;
+                    const campDetails = info.campDetails;
+                    disasterInfo.innerHTML = `<h3>Help Line and Camp Details:</h3><p>${helpline}</p><p>${campDetails}</p>`;
+                    disasterInfo.style.display = "block";
+                } else {
+                    disasterInfo.innerHTML = "<p>No information available for the selected district.</p>";
+                    disasterInfo.style.display = "block";
+                }
+            }
+    
+            // Event listeners
+            document.getElementById("stateSelect").addEventListener("change", populateDistricts);
+            document.getElementById("disasterForm").addEventListener("submit", displayDisasterInfo);
+    
+            // Initial population of districts
+            populateDistricts();
+        </script>
+    </body>
+    <div class="image" style="margin-left: 40%;">
+        <p>To Download the Mobile App</p>
+        <a href = "Disaster Helpline App_1_1.0.apk" Download = "Disaster Helpline App">
+           <button type = "button" style="margin-left: 8%;">Click here</button></a>
+        
+    </div>
+    
+    </html>
